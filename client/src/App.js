@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./Themes";
 import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home/Home";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
         <GlobalStyles />
         <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <Home/>
       </ThemeProvider>
 
     </div>

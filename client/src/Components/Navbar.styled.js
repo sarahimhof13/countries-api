@@ -8,6 +8,7 @@ export const NavContainer = styled.header`
     padding: 0 16px;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    background-color: ${(props) => props.theme.colors.primary};
 
     @media ${Device.laptopL} {
         padding: 0 81px;
