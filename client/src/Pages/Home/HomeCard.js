@@ -1,20 +1,17 @@
-import { HomeCardContainer, HomeCardText, HomeImgContainer } from "./Home.styled";
-import data from "../../data.json"
+import { HomeCardContainer, HomeCardText } from "./Home.styled";
 
-const HomeCard = () => {
+const HomeCard = ({ flags, name, population, region, capital }) => {
     return (
         <HomeCardContainer>
-            {data.map((item) => (
-                <div key={item.name}>
-                    <img src={item.flags.svg} alt="country flag"></img>
-                    <HomeCardText>
-                        <a href="/">{item.name}</a>
-                        <p><span>Population: </span>{item.population}</p>
-                        <p><span>Region: </span>{item.region}</p>
-                        <p><span>Capital: </span>{item.capital}</p>
-                    </HomeCardText>
-                </div>
-            ))}
+            <div>
+                {flags && <img src={flags.svg} alt="country flag"></img>}
+                <HomeCardText>
+                    <a href="/">{name}</a>
+                    <p><span>Population: </span>{population}</p>
+                    <p><span>Region: </span>{region}</p>
+                    <p><span>Capital: </span>{capital}</p>
+                </HomeCardText>
+            </div>
         </HomeCardContainer>
     );
 }
